@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  microfront1:
+    build:
+      context: ./microfront1
+    ports:
+      - "3001:3000"
+    environment:
+      NODE_ENV: production
+  
+  microfront2:
+    build:
+      context: ./microfront2
+    ports:
+      - "3002:3000"
+    environment:
+      NODE_ENV: production
+
+  base:
+    build:
+      context: ./host
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+    depends_on:
+      - microfront1
+      - microfront2

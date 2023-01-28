@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 6rem;
+  min-height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
