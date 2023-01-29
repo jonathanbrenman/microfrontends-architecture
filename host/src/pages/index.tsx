@@ -25,6 +25,9 @@ export default function Home() {
               <li className={styles.menuItem}>
                 <a onClick={() => setRoute("/app2")}>App2</a>
               </li>
+              <li className={styles.menuItem}>
+                <a onClick={() => setRoute("/app3")}>App3</a>
+              </li>
             </ul>
         </div>
 

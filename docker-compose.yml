@@ -15,6 +15,14 @@ services:
       - "3002:3000"
     environment:
       NODE_ENV: production
+  
+  microfront3:
+    build:
+      context: ./microfront3
+    ports:
+      - "3003:80"
+    environment:
+      NODE_ENV: production
 
   base:
     build:
@@ -26,3 +34,4 @@ services:
     depends_on:
       - microfront1
       - microfront2
+      - microfront3
