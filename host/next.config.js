@@ -2,6 +2,7 @@
 
 const APP1_URL = "http://microfront1:3000";
 const APP2_URL = "http://microfront2:3000";
+const APP3_URL = "http://microfront3:80";
 
 const nextConfig = {
   reactStrictMode: true,
@@ -27,6 +28,14 @@ const nextConfig = {
          {
             source: "/app2/:path*",
             destination: `${APP2_URL}/app2/:path*`,
+         },
+         {
+            source: "/app3",
+            destination: `${APP3_URL}/app3`,
+         },
+         {
+            source: "/app3/:path*",
+            destination: `${APP3_URL}/app3/:path*`,
          },
       ];
    },
